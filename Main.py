@@ -1,16 +1,11 @@
-import speech_recognition as sr
+while True:
+    s = str(input('Diga o que quiser, se eu quiser lhe ajudar, respondo em seguida.'))
+    if s == 'Qual seu nome?':
+        print('Tita')
+    elif s == 'Você gosta de que?':
+        print('Muitas coisas')
+    elif s == 'Quando você nasceu?':
+        print('24/01/2021 as 21:59:57')
 
-def reconhece():
-     rec = sr.Recognize()
-       with sr.Microphone() as s:
-         rec.adjust_for_ambient_noise(s)
-
-          while True:
-          audio = rec.listen(s)
-
-          entrada = rec.recogize_google_(audio, Lenguage="pt")
-           return "Você disse {}".format(entrada)
-
-
-fala = reconhece()
-print(fala)
+    else:
+        print('Não me faça perguntas bestas.')
